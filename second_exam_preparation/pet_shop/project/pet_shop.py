@@ -7,16 +7,17 @@ class PetShop:
     def add_food(self, name: str, quantity: float):
         if quantity <= 0:
             raise ValueError('Quantity cannot be equal to or less than 0')
-
         if name not in self.food:
             self.food[name] = 0
         self.food[name] += quantity
+
         return f"Successfully added {quantity:.2f} grams of {name}."
 
     def add_pet(self, name: str):
         if name not in self.pets:
             self.pets.append(name)
             return f"Successfully added {name}."
+
         raise Exception("Cannot add a pet with the same name")
 
     def feed_pet(self, food_name: str, pet_name: str):
