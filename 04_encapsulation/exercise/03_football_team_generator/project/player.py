@@ -10,14 +10,9 @@ class Player:
     def name(self):
         return self.__name
 
-    @name.setter
-    def name(self, value):
-        if not value:
-            raise ValueError("The name cannot be an empty string")
-        self.__name = value
-
     def __str__(self) -> str:
-        print_data = (f"Player: {self.__name}\nSprint: {self.__sprint}\nDribble: {self.__dribble}\n"
-                      f"Passing: {self.__passing}\nShooting: {self.__shooting}")
-
-        return print_data
+        return (f"Player: {self.__name}\n"
+                f"Sprint: {self.__sprint}\n"
+                f"Dribble: {self.__dribble}\n"
+                f"Passing: {self.__passing}\n"
+                f"Shooting: {self.__shooting}")
