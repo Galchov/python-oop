@@ -15,7 +15,7 @@ class Calculator:
     def multiply(*nums):
         return reduce(lambda x, y: x * y, nums)
 
-    @ staticmethod
+    @staticmethod
     def divide(*nums):
         return reduce(lambda x, y: x / y, nums)
 

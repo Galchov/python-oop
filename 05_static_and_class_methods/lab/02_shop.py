@@ -12,7 +12,7 @@ class Shop:
         self.items: Dict[str, int] = {}
 
     @classmethod
-    def small_shop(cls, name: str, type: str) -> object:
+    def small_shop(cls, name: str, type: str) -> "Shop":
         return cls(name, type, 10)
 
     def add_item(self, item_name: str) -> str:

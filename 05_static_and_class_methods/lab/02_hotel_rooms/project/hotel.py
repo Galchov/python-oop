@@ -9,7 +9,7 @@ class Hotel:
         self.guests = 0
 
     @classmethod
-    def from_stars(cls, stars_count: int) -> object:
+    def from_stars(cls, stars_count: int) -> "Hotel":
         return cls(f"{stars_count} stars Hotel")
 
     def add_room(self, room: Room) -> None:
@@ -19,7 +19,7 @@ class Hotel:
         room = [r for r in self.rooms if r.number == room_number][0]
         return room.take_room(people)
 
-    def free_room(self, room_number: int):
+    def free_room(self, room_number: int) -> str or None:
         room = [r for r in self.rooms if r.number == room_number][0]
         return room.free_room()
 
@@ -30,5 +30,3 @@ class Hotel:
         return (f"Hotel {self.name} has {self.guests} total guests\n"
                 f"Free rooms: {', '.join(vacant_rooms)}\n"
                 f"Taken rooms: {', '.join(occupied_rooms)}")
-
-

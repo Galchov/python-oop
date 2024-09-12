@@ -7,13 +7,13 @@ class Integer:
         self.value = value
 
     @classmethod
-    def from_float(cls, float_value: float):
+    def from_float(cls, float_value: float or str) -> "Integer" or str:
         if not isinstance(float_value, float):
             return "value is not a float"
         return cls(int(float_value))
 
     @classmethod
-    def from_roman(cls, value: str):
+    def from_roman(cls, value: str) -> "Integer":
         roman_numerals = {"I": 1,
                           "V": 5,
                           "X": 10,
@@ -35,7 +35,7 @@ class Integer:
         return cls(int_value)
 
     @classmethod
-    def from_string(cls, value: str):
+    def from_string(cls, value: str or float) -> "Integer" or str:
         if not isinstance(value, str):
             return "wrong type"
         try:
