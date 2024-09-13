@@ -11,12 +11,12 @@ def start_playing(obj):
 
 
 class Guitar:
-    def play(self):
+    def play(self) -> str:
         return "Playing the guitar"
 
 
 class Children:
-    def play(self):
+    def play(self) -> str:
         return "Children are playing"
 
 
